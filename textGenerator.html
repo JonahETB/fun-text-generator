@@ -6,12 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <p>put ( findLetters(); into the console)</p>
+    <p>put ( findLetters(); ) into the console</p>
+    <p> you can change the word used by changing the const at the start of scripts</p>
     <script>
         // i will be writing code that outputs hello world
         const text = "Hello World!";
         let num = 0;
-        textPrint = "";
+        let textPrint = "";
 
         async function findLetters () {
             for (let c = 0; num < text.length; c++) {
@@ -24,9 +25,6 @@
                     c = 0;
                 } else {
                     textPrint = textPrint.substring(0, textPrint.length - 1);
-                }
-                if (text.length == textPrint.length) {
-                    break;
                 }
             }
         }
