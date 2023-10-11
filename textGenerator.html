@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // i will be writing code that outputs hello world
+        const text = "Hello World!";
+        let num = 0;
+        finalWord = "";
+
+        async function findLetters () {
+            for (let c = 0; num < text.length; c++) {
+                let letterToFind = text.charAt(num);
+                finalWord += String.fromCharCode(c);
+                await sleep(15);
+                console.log(`${finalWord}`);
+                if (c == text.charCodeAt(num)) {
+                    num++;
+                    c = 0;
+                } else {
+                    finalWord = finalWord.substring(0, finalWord.length - 1);
+                }
+                if (text.length == finalWord.length) {
+                    break;
+                }
+            }
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        console.log(`${finalWord}`);
+        // findLetters();
+    </script>
+</body>
+</html>
